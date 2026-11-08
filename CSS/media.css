@@ -1,0 +1,1081 @@
+/* ----- A special thank you to Nagy Osama and Ahmed Yassein for their guidance, support, and valuable knowledge. 😄🫶🏻 ----- */
+
+
+
+/* ----- START RESPONSIVE DESIGN ----- */
+
+
+
+
+
+
+
+/* ----- 1539px AND HIGHER  ----- */
+
+@media (min-width: 1538px) {
+
+    /* ----- START MAIN CONTENT ----- */
+
+    .main-content {
+
+        padding: 1rem;
+
+    }
+
+    /* ----- END MAIN CONTENT ----- */
+
+
+    /* ----- START SUMMARY CARDS ----- */
+
+    .dashboard-summary-cards {
+
+        gap: 1.25rem;
+
+    }
+
+    .dashboard-summary-card {
+
+        padding: 1.5rem;
+
+    }
+
+    .dashboard-summary-card-amount {
+
+        font-size: 2rem;
+
+    }
+
+    /* ----- END SUMMARY CARDS ----- */
+
+
+    /* ----- START DASHBOARD SECTIONS ----- */
+
+    .dashboard-overview,
+    .financial-dashboard {
+
+        gap: 0.85rem;
+
+    }
+
+    .recent-activities,
+    .recent-transactions,
+    .monthly-bills,
+    .payment-methods,
+    .income-expenses,
+    .account-summary,
+    .budget-overview {
+
+        padding: 1.2rem;
+
+    }
+
+    /* ----- END DASHBOARD SECTIONS ----- */
+
+}
+
+
+
+/* ----- END SMALL DESKTOP SCREENS ----- */
+
+
+
+
+/* ----- START TABLET AND SMALL LAPTOP LAYOUT ----- */
+
+/* ----- 1280px AND BELOW ----- */
+
+
+@media (max-width: 1280px)  {
+
+
+    /* ----- START SIDEBAR ----- */
+
+    .sidebar {
+
+        width: 65px;
+
+        padding: 1rem 0.35rem;
+
+        align-items: center;
+
+        gap: 1.5rem;
+
+    }
+
+    .sidebar-logo {
+
+        width: 100%;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+
+    .sidebar-logo-icon {
+
+        padding: 0.6rem;
+
+        border-radius: 13px;
+
+    }
+
+    .sidebar-logo-icon img {
+
+        width: 1rem;
+
+        height: 1rem;
+
+    }
+
+
+    .sidebar-logo-text {
+
+        display: none;
+
+    }
+
+    .sidebar-navigation,
+    .sidebar-quick-actions {
+
+        width: 100%;
+
+    }
+
+    .sidebar-navigation-button,
+    .sidebar-quick-action-button {
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 0.85rem 2rem;
+
+        font-size: 0;
+
+        width: 100%;
+
+    }
+
+    .sidebar-navigation .sidebar-navigation-button:first-child {
+
+        width: 80%;
+
+        padding-left: 0;
+
+        padding-right: 0;
+
+        align-self: center;
+
+    }
+
+    .sidebar-navigation-button img,
+    .sidebar-quick-action-button img {
+
+        width: 1.1rem;
+
+        height: 1.1rem;
+
+    }
+
+
+    .sidebar-navigation-button:first-child img {
+
+        transform: translateX(-6px);
+
+    }
+
+    .sidebar-quick-actions h2 {
+
+        display: none;
+
+    }
+
+    /* ----- END SIDEBAR ----- */
+
+
+    /* ----- START MAIN CONTENT ----- */
+
+    .main-content {
+
+        margin-right: 65px;
+
+        padding: 1rem;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+
+            "header header"
+
+            "summary summary"
+
+            "activities income-expenses"
+
+            "transactions transactions"
+
+            "bills account-summary"
+
+            "budget payment-methods";
+
+        gap: 1rem;
+    }
+
+    /* ----- END MAIN CONTENT ----- */
+
+
+    /* ----- START GRID LAYOUT ----- */
+
+    .dashboard-header {
+
+        grid-area: header;
+
+        margin: 0;
+
+        padding: 1rem 1.25rem;
+
+        min-width: 0;
+
+    }
+
+    .dashboard-summary-cards {
+
+        grid-area: summary;
+
+        margin: 0;
+
+        gap: 1rem;
+
+    }
+
+    .dashboard-overview,
+    .financial-dashboard,
+    .financial-middle-column {
+
+        display: contents;
+
+    }
+
+    .recent-activities {
+
+        grid-area: activities;
+
+        min-width: 0;
+
+        margin: 0;
+
+    }
+
+    .recent-transactions {
+
+        grid-area: transactions;
+
+        grid-row: auto;
+
+        min-width: 0;
+
+        margin: 0;
+
+    }
+
+    .monthly-bills {
+
+        grid-area: bills;
+
+        min-width: 0;
+
+        margin: 0;
+
+    }
+
+    .income-expenses {
+
+        grid-area: income-expenses;
+
+        min-width: 0;
+
+        flex: 1 1 auto;
+
+    }
+
+    .account-summary {
+
+        grid-area: account-summary;
+
+        min-width: 0;
+
+        flex: 1 1 auto;
+
+    }
+
+    .budget-overview {
+
+        grid-area: budget;
+
+        min-width: 0;
+
+        margin: 0;
+
+    }
+
+    .payment-methods {
+
+        grid-area: payment-methods;
+
+        min-width: 0;
+
+        margin: 0;
+
+    }
+
+    /* ----- END GRID LAYOUT ----- */
+
+
+    /* ----- START SUMMARY CARDS ----- */
+
+    .dashboard-summary-card {
+
+        padding: 1.25rem;
+
+    }
+
+    .dashboard-summary-card-amount {
+
+        font-size: 1.8rem;
+
+    }
+
+    /* ----- END SUMMARY CARDS ----- */
+
+
+    /* ----- START TRANSACTIONS ----- */
+
+    .transaction-row {
+
+        grid-template-columns: 2fr 1fr 1fr 0.8fr 1fr;
+
+        gap: 0.5rem;
+
+        font-size: 0.85rem;
+
+    }
+
+    .transaction-date {
+
+        font-size: 0.8rem;
+
+    }
+
+    /* ----- END TRANSACTIONS ----- */
+
+
+    /* ----- START FINANCIAL CARDS ----- */
+
+    .payment-methods,
+    .income-expenses,
+    .account-summary,
+    .budget-overview {
+
+        padding: 1rem;
+
+    }
+
+    .account-summary-item {
+
+        padding: 0.75rem;
+
+    }
+
+    .account-summary-balance {
+
+        font-size: 0.9rem;
+
+    }
+
+    /* ----- END FINANCIAL CARDS ----- */
+
+
+    /* ----- START MONTHLY BILLS ----- */
+
+    .monthly-bills-grid {
+
+        gap: 0.5rem;
+
+    }
+
+    .monthly-bill-card {
+
+        padding: 0.4rem;
+
+    }
+
+    /* ----- END MONTHLY BILLS ----- */
+
+}
+
+
+/* ----- END TABLET AND SMALL LAPTOP LAYOUT ----- */
+
+
+
+
+/* ----- START COMPACT TABLET LAYOUT ----- */
+
+/* ----- 1025px AND BELOW ----- */
+
+
+@media (max-width: 1025px)  {
+
+
+    /* ----- START MAIN CONTENT ----- */
+
+    .main-content {
+
+        padding: 0.75rem;
+
+        gap: 0.75rem;
+
+    }
+
+    /* ----- END MAIN CONTENT ----- */
+
+
+    /* ----- START DASHBOARD HEADER ----- */
+
+    .dashboard-header {
+
+        padding: 0.85rem 1rem;
+
+        gap: 0.75rem;
+
+    }
+
+    .dashboard-header-right-group,
+    .dashboard-header-left-group {
+
+        gap: 0.65rem;
+
+    }
+
+    .header-brand {
+
+        gap: 0.65rem;
+
+    }
+
+    /* ----- END DASHBOARD HEADER ----- */
+
+
+    /* ----- START SUMMARY CARDS ----- */
+
+    .dashboard-summary-cards {
+
+        gap: 0.75rem;
+
+    }
+
+    .dashboard-summary-card {
+
+        padding: 1rem;
+
+    }
+
+    .dashboard-summary-card-title {
+
+        font-size: 0.85rem;
+
+    }
+
+    .dashboard-summary-card-amount {
+
+        font-size: 1.6rem;
+
+    }
+
+    /* ----- END SUMMARY CARDS ----- */
+
+
+    /* ----- START SECTION HEADINGS ----- */
+
+    .recent-activities-header h2,
+    .recent-transactions-header h2,
+    .monthly-bills-header h2,
+    .income-expenses-header h2,
+    .account-summary-header h2,
+    .budget-overview-header h2,
+    .payment-methods-header h2 {
+
+        font-size: 1rem;
+
+    }
+
+    /* ----- END SECTION HEADINGS ----- */
+
+
+    /* ----- START SECTION PADDING ----- */
+
+    .recent-activities,
+    .recent-transactions,
+    .monthly-bills,
+    .payment-methods,
+    .income-expenses,
+    .account-summary,
+    .budget-overview {
+
+        padding: 0.85rem;
+
+    }
+
+    /* ----- END SECTION PADDING ----- */
+
+
+    /* ----- START TRANSACTIONS ----- */
+
+    .transaction-row {
+
+        gap: 0.35rem;
+
+        font-size: 0.78rem;
+
+    }
+
+    .transaction-info h3 {
+
+        font-size: 0.85rem;
+
+    }
+
+    .transaction-info p,
+    .transaction-date {
+
+        font-size: 0.72rem;
+
+    }
+
+    /* ----- END TRANSACTIONS ----- */
+
+
+    /* ----- START ACCOUNT SUMMARY ----- */
+
+    .account-summary-item {
+
+        gap: 0.4rem;
+
+        padding: 0.65rem;
+
+    }
+
+    .account-summary-info {
+
+        gap: 0.5rem;
+
+    }
+
+    .account-summary-info img {
+
+        width: 2rem;
+
+        height: 2rem;
+
+        padding: 0.45rem;
+
+    }
+
+    .account-summary-balance {
+
+        font-size: 0.8rem;
+
+    }
+
+    /* ----- END ACCOUNT SUMMARY ----- */
+
+
+    /* ----- START BUDGET OVERVIEW ----- */
+
+    .budget-category {
+
+        gap: 0.5rem;
+
+        padding: 0.75rem;
+
+    }
+
+    .budget-category-info {
+
+        gap: 0.5rem;
+
+    }
+
+    .budget-category-info img {
+
+        width: 2rem;
+
+        height: 2rem;
+
+        padding: 0.45rem;
+
+    }
+
+    .budget-category-info h3,
+    .budget-category-amount h3 {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    /* ----- END BUDGET OVERVIEW ----- */
+
+}
+
+
+
+/* ----- END COMPACT TABLET LAYOUT ----- */
+
+
+/* ----- START MOBILE LAYOUT ----- */
+
+
+/* ----- 765px AND BELOW ----- */
+
+
+@media (max-width: 765px) {
+
+
+    /* ----- START SIDEBAR ----- */
+
+    .sidebar {
+
+        display: none;
+    }
+
+    /* ----- END SIDEBAR ----- */
+
+
+    /* ----- START MAIN CONTENT ----- */
+
+    .main-content {
+
+        margin-right: 0;
+
+        padding: 0.75rem;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr);
+
+        grid-template-areas:
+
+            "header"
+            "balance"
+            "income"
+            "expenses"
+            "activities"
+            "transactions"
+            "bills"
+            "budget"
+            "income-expenses"
+            "account-summary"
+            "payment-methods";
+
+        gap: 1rem;
+    }
+
+    /* ----- END MAIN CONTENT ----- */
+
+
+    /* ----- START CONTENT ORDER ----- */
+
+    .dashboard-overview,
+    .financial-dashboard,
+    .financial-middle-column,
+    .dashboard-summary-cards {
+
+        display: contents;
+
+    }
+
+    .dashboard-header {
+
+        grid-area: header;
+
+        margin: 0;
+
+        min-width: 0;
+
+        padding: 0.85rem;
+
+        flex-wrap: wrap;
+
+        gap: 0.75rem;
+
+    }
+
+    .dashboard-summary-card:nth-child(1) {
+
+        grid-area: balance;
+
+    }
+
+    .dashboard-summary-card:nth-child(2) {
+
+        grid-area: income;
+    }
+
+    .dashboard-summary-card:nth-child(3) {
+
+        grid-area: expenses;
+    }
+
+    .recent-activities {
+
+        grid-area: activities;
+
+    }
+
+    .recent-transactions {
+
+        grid-area: transactions;
+
+        grid-row: auto;
+
+    }
+
+    .monthly-bills {
+
+        grid-area: bills;
+
+    }
+
+    .budget-overview {
+
+        grid-area: budget;
+
+    }
+
+    .income-expenses {
+
+        grid-area: income-expenses;
+
+        flex: 1 1 auto;
+    }
+
+    .account-summary {
+
+        grid-area: account-summary;
+
+        flex: 1 1 auto;
+
+    }
+
+    .payment-methods {
+
+        grid-area: payment-methods;
+
+    }
+
+    /* ----- END CONTENT ORDER ----- */
+
+
+    /* ----- START HEADER ----- */
+
+    .dashboard-header-right-group,
+    .dashboard-header-left-group {
+
+        gap: 0.5rem;
+
+    }
+
+    .header-brand {
+
+        gap: 0.5rem;
+
+    }
+
+    .header-brand-info h2 {
+
+        font-size: 1rem;
+
+    }
+
+    .header-brand-info p {
+
+        font-size: 0.75rem;
+
+    }
+
+    .user-profile-info h3 {
+
+        font-size: 0.85rem;
+
+    }
+
+    .user-profile-info p {
+
+        font-size: 0.7rem;
+
+    }
+
+    /* ----- END HEADER ----- */
+
+
+    /* ----- START SUMMARY CARDS ----- */
+
+    .dashboard-summary-card {
+
+        padding: 1.1rem;
+
+        margin: 0;
+
+    }
+
+    .dashboard-summary-card-title {
+
+        font-size: 0.85rem;
+
+    }
+
+    .dashboard-summary-card-amount {
+
+        font-size: 1.8rem;
+
+    }
+
+    /* ----- END SUMMARY CARDS ----- */
+
+
+    /* ----- START DASHBOARD SECTIONS ----- */
+
+    .recent-activities,
+    .recent-transactions,
+    .monthly-bills,
+    .budget-overview,
+    .income-expenses,
+    .account-summary,
+    .payment-methods {
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 1rem;
+
+    }
+
+    /* ----- END DASHBOARD SECTIONS ----- */
+
+
+    /* ----- START TRANSACTIONS ----- */
+
+    .transactions-list {
+
+        overflow-x: auto;
+
+    }
+
+    .transaction-row {
+
+        min-width: 600px;
+
+        gap: 0.5rem;
+
+        font-size: 0.85rem;
+
+    }
+
+    /* ----- END TRANSACTIONS ----- */
+
+
+    /* ----- START MONTHLY BILLS ----- */
+
+    .monthly-bills-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* ----- END MONTHLY BILLS ----- */
+
+
+    /* ----- START INCOME EXPENSES CHART ----- */
+
+    .income-expenses-chart {
+
+        min-height: 9rem;
+    }
+
+    /* ----- END INCOME EXPENSES CHART ----- */
+
+
+    /* ----- START ACCOUNT SUMMARY ----- */
+
+    .account-summary-item {
+
+        padding: 0.75rem;
+
+    }
+
+    .account-summary-balance {
+
+        font-size: 0.9rem;
+
+    }
+
+    /* ----- END ACCOUNT SUMMARY ----- */
+
+
+    /* ----- START BUDGET OVERVIEW ----- */
+
+    .budget-category {
+
+        padding: 0.85rem;
+    }
+
+    /* ----- END BUDGET OVERVIEW ----- */
+
+}
+
+
+
+/* ----- END MOBILE LAYOUT ----- */
+
+
+
+
+/* ----- START SMALL MOBILE SCREENS ----- */
+
+/* ----- 480px AND BELOW ----- */
+
+
+@media (max-width: 480px) {
+
+
+    /* ----- START MAIN CONTENT ----- */
+
+    .main-content {
+
+        padding: 0.5rem;
+
+        gap: 0.75rem;
+
+    }
+
+    /* ----- END MAIN CONTENT ----- */
+
+
+    /* ----- START DASHBOARD HEADER ----- */
+
+    .dashboard-header {
+
+        padding: 0.7rem;
+
+    }
+
+    .header-actions {
+
+        gap: 0.4rem;
+
+    }
+
+    .dashboard-header-action-button {
+
+        width: 2.2rem;
+
+        height: 2.2rem;
+
+    }
+
+    /* ----- END DASHBOARD HEADER ----- */
+
+
+    /* ----- START SUMMARY CARDS ----- */
+
+    .dashboard-summary-card {
+
+        padding: 0.9rem;
+
+    }
+
+    .dashboard-summary-card-amount {
+
+        font-size: 1.6rem;
+
+    }
+
+    /* ----- END SUMMARY CARDS ----- */
+
+
+    /* ----- START SECTION HEADINGS ----- */
+
+    .recent-activities-header h2,
+    .recent-transactions-header h2,
+    .monthly-bills-header h2,
+    .income-expenses-header h2,
+    .account-summary-header h2,
+    .budget-overview-header h2,
+    .payment-methods-header h2 {
+
+        font-size: 0.95rem;
+    }
+
+    /* ----- END SECTION HEADINGS ----- */
+
+
+    /* ----- START MONTHLY BILLS ----- */
+
+    .monthly-bills-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    /* ----- END MONTHLY BILLS ----- */
+
+
+    /* ----- START ACCOUNT SUMMARY ----- */
+
+    .account-summary-item {
+
+        flex-wrap: wrap;
+
+    }
+
+    .account-summary-balance {
+
+        font-size: 0.85rem;
+
+    }
+
+    /* ----- END ACCOUNT SUMMARY ----- */
+
+
+    /* ----- START BUDGET CATEGORY ----- */
+
+    .budget-category {
+
+        gap: 0.4rem;
+
+        padding: 0.7rem;
+
+    }
+
+    .budget-category-info h3,
+    .budget-category-amount h3 {
+
+        font-size: 0.9rem;
+
+    }
+
+    /* ----- END BUDGET CATEGORY ----- */
+
+}
+
+
+
+/* ----- END SMALL MOBILE SCREENS ----- */
+
+
+
+
+/* ----- END RESPONSIVE DESIGN ----- */

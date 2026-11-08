@@ -1,0 +1,3079 @@
+/* ----- A special thank you to Nagy Osama and Ahmed Yassein for their guidance, support, and valuable knowledge. 😄🫶🏻 ----- */
+
+
+
+/* ----- START ROOT ----- */
+
+:root {
+
+    /* Main Colors */
+
+    --primary-color: #2563eb;
+
+    --secondary-color: #64748b;
+
+
+
+    /* Background Colors */
+
+    --main-background: #f1f5f99f;
+
+    --sidebar-background: #ffffff;
+
+    --section-background: #ffffff;
+
+    --profile-background: #ffffff;
+
+    --status-background: #f0fdf4;
+
+    --active-background: #eff6ff;
+
+
+
+    /* Text Colors */
+
+    --text-color: #111827;
+
+    /* Border Colors */
+
+    --main-border: #e5e7eb;
+
+    --active-border: #dbeafe;
+
+    --status-border: #dcfce7;
+
+
+
+    /* Logo Colors */
+
+    --logo-background: #4035e8;
+
+    /* Quick Action Colors */
+
+    --action-send: #eff6ff;
+
+    --action-add: #dcfce7;
+
+    --action-bill: #f3e8ff;
+
+    --action-invest: #fff0e8;
+
+
+
+    /* Font */
+
+    --main-font: "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif;
+}
+
+
+/* ----- END ROOT ----- */
+
+
+
+/* ----- START GENERAL STYLES ----- */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+}
+
+
+/* ----- END GENERAL STYLES ----- */
+
+
+
+/* ----- START BODY ----- */
+
+
+body {
+
+    scrollbar-width: none;
+
+    font-family: var(--main-font);
+
+    color: var(--text-color);
+
+    background-color: var(--main-background);
+
+    font-size: 16px;
+}
+
+
+/* ----- END BODY ----- */
+
+
+/* ----- START SIDEBAR ----- */
+
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    height: 100vh;
+
+    width: 13%;
+
+    background-color: var(--sidebar-background);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    gap: 2rem;
+
+    padding: 1.25rem;
+
+    border-left: 1px solid var(--main-border);
+}
+
+
+/* ----- END SIDEBAR ----- */
+
+
+/* ----- START SIDEBAR LOGO ----- */
+
+.sidebar-logo {
+
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    justify-content: flex-end;
+}
+
+.sidebar-logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.sidebar-logo-title {
+
+    color: var(--text-color);
+
+    font-size: 2.1rem;
+
+    font-weight: 800;
+
+}
+
+.sidebar-logo-description {
+
+    color: var(--secondary-color);
+
+    font-size: 0.95rem;
+
+    
+
+}
+
+.sidebar-logo-icon {
+
+    background-color: var(--logo-background);
+
+    border-radius: 0.9rem;
+
+    padding: 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.sidebar-logo-icon img {
+
+    width: 1.5rem;
+
+    height: 1.5rem;
+
+}
+
+/* ----- END SIDEBAR LOGO ----- */
+
+
+/* ----- START SIDEBAR NAVIGATION ----- */
+
+
+.sidebar-navigation {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+
+}
+
+.sidebar-navigation-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    width: 100%;
+
+    padding: 0.85rem;
+
+    border: 1px solid transparent;
+
+    border-radius: 0.75rem;
+
+    background-color: transparent;
+
+    color: var(--secondary-color);
+
+    text-align: right;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.sidebar-navigation-button img {
+
+    width: 1.1rem;
+
+    height: 1.1rem;
+
+}
+
+
+.sidebar-navigation-button:hover {
+
+    background-color: #eff6ff28;
+
+    border-color: #dbeafe26;
+}
+
+
+/* ----- START ACTIVE NAVIGATION BUTTON ----- */
+
+.sidebar-navigation .sidebar-navigation-button:first-child {
+
+    background-color: var(--active-background);
+
+    border-color: var(--active-border);
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+}
+
+/* ----- END ACTIVE NAVIGATION BUTTON ----- */
+
+
+/* ----- END SIDEBAR NAVIGATION ----- */
+
+
+/* ----- START QUICK ACTIONS ----- */
+
+
+.sidebar-quick-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.65rem;
+
+}
+
+.sidebar-quick-actions h2 {
+
+    color: var(--secondary-color);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin: 0 0 0.5rem;
+
+}
+
+
+.sidebar-quick-action-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border: 1px solid transparent;
+
+    border-radius: 0.5rem;
+
+    background-color: transparent;
+
+    color: var(--secondary-color);
+
+    text-align: right;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.sidebar-quick-action-button:hover {
+
+    transform: translateX(3px);
+
+    background-color: #eff6ff28;
+
+    border-color: #dbeafe26;
+}
+
+
+
+.sidebar-quick-action-button img {
+
+    width: 1.2rem;
+
+    height: 1.2rem;
+
+    padding: 0.65rem;
+
+    border-radius: 0.5rem;
+
+    box-sizing: content-box;
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+/* ----- END QUICK ACTIONS ----- */
+
+
+/* ----- START QUICK ACTION ICON BACKGROUNDS ----- */
+
+
+.sidebar-quick-action-button:first-of-type img {
+
+    background-color: var(--action-send);
+
+}
+
+.sidebar-quick-action-button:nth-of-type(2) img {
+
+    background-color: var(--action-add);
+
+}
+
+.sidebar-quick-action-button:nth-of-type(3) img {
+
+    background-color: var(--action-bill);
+
+}
+
+.sidebar-quick-action-button:last-of-type img {
+
+    background-color: var(--action-invest);
+
+}
+
+
+.sidebar-quick-action-button:first-of-type:hover img {
+
+    background-color: #dbeafe;
+
+}
+
+.sidebar-quick-action-button:nth-of-type(2):hover img {
+
+    background-color: #bbf7d0;
+
+}
+
+.sidebar-quick-action-button:nth-of-type(3):hover img {
+
+    background-color: #e9d5ff;
+
+}
+
+.sidebar-quick-action-button:last-of-type:hover img {
+
+    background-color: #fed7aa;
+
+}
+
+
+/* ----- END QUICK ACTION ICON BACKGROUNDS ----- */
+
+
+/* ----- START MAIN CONTENT ----- */
+
+.main-content {
+
+    margin-right: 13%;
+
+    padding: 1.25rem;
+
+}
+
+/* ----- END MAIN CONTENT ----- */
+
+
+/* ----- START DASHBOARD HEADER ----- */
+
+.dashboard-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 7rem;
+
+    margin: 0.75rem;
+
+    padding: 1.25rem 1.75rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+/* ----- END DASHBOARD HEADER ----- */
+
+
+/* ----- START HEADER GROUPS ----- */
+
+.dashboard-header-right-group,
+.dashboard-header-left-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+/* ----- END HEADER GROUPS ----- */
+
+
+/* ----- START HEADER BRAND ----- */
+
+.header-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+/* ----- END HEADER BRAND ----- */
+
+/* ----- START HEADER LOGO ----- */
+
+.header-logo {
+
+    background-color: var(--logo-background);
+
+    border-radius: 1rem;
+
+    padding: 0.75rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.header-logo img {
+
+    width: 1.72rem;
+
+    height: 1.72rem;
+
+}
+
+/* ----- END HEADER LOGO ----- */
+
+/* ----- START HEADER BRAND INFO ----- */
+
+.header-brand-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.4;
+
+
+}
+
+.header-brand-info h2 {
+
+    color: var(--text-color);
+
+    font-size: 2.1rem;
+
+    font-weight: 800;
+
+}
+
+.header-brand-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.85rem;
+
+}
+
+/* ----- END HEADER BRAND INFO ----- */
+
+
+/* ----- START HEADER STATUS ----- */
+
+
+.header-status p {
+
+    min-width: 35%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.35rem 0.65rem;
+
+    color: #16a34a;
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    background-color: var(--main-background);
+
+    border: 1px solid var(--status-border);
+
+    border-radius: 0.45rem;
+
+}
+
+
+.header-status p::before {
+
+    content: "";
+
+    width: 7px;
+
+    height: 7px;
+
+    background-color: #22c55e;
+
+    border-radius: 50%;
+}
+
+/* ----- END HEADER STATUS ----- */
+
+
+/* ----- START HEADER ACTIONS ----- */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+.dashboard-header-action-button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 0.75rem;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+}
+
+.dashboard-header-action-button img {
+
+    width: 1.10rem;
+
+    height: 1.10rem;
+
+}
+
+/* ----- END HEADER ACTIONS ----- */
+
+/* ----- START NOTIFICATION COUNT ----- */
+
+.dashboard-header-notification-count {
+
+    position: absolute;
+
+    top: -5px;
+
+    right: -5px;
+
+    width: 1.125rem;
+
+    height: 1.125rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ef4444;
+
+    color: #ffffff;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    border-radius: 50%;
+
+}
+
+/* ----- END NOTIFICATION COUNT ----- */
+
+/* ----- START USER PROFILE ----- */
+
+.user-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.4em 0.9rem;
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 0.75rem;
+
+    background-color: var(--profile-background);
+
+}
+
+.user-profile img {
+
+    width: 2.4rem;
+
+    height: 2.4rem;
+
+    border-radius: 0.7rem;
+
+    object-fit: cover;
+
+}
+
+.user-profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.4;
+
+
+
+}
+
+.user-profile-info h3 {
+
+    color: var(--text-color);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+}
+
+.user-profile-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+}
+
+/* ----- END USER PROFILE ----- */
+
+
+/* ----- START SUMMARY CARDS ----- */
+
+.dashboard-summary-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    margin: 2rem 0.75rem 0.75rem;
+
+}
+
+/* ----- END SUMMARY CARDS ----- */
+
+/* ----- START SUMMARY CARD ----- */
+
+.dashboard-summary-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    padding: 1.8rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+/* ----- END SUMMARY CARD ----- */
+
+
+/* ----- START SUMMARY CARD TITLE ----- */
+
+.dashboard-summary-card-title {
+
+    color: var(--secondary-color);
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+}
+
+/* ----- END SUMMARY CARD TITLE ----- */
+
+
+/* ----- START SUMMARY CARD AMOUNT ----- */
+
+.dashboard-summary-card-amount {
+
+    color: var(--text-color);
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+}
+
+/* ----- END SUMMARY CARD AMOUNT ----- */
+
+/* ----- START SUMMARY CARD PERCENTAGE ----- */
+
+.dashboard-summary-card-percentage {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    color: #16a34a;
+
+}
+
+.dashboard-summary-card-percentage img {
+
+    width: 0.85rem;
+
+    height: 0.85rem;
+
+}
+
+/* ----- END SUMMARY CARD PERCENTAGE ----- */
+
+/* ----- START DASHBOARD OVERVIEW ----- */
+
+.dashboard-overview {
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 1rem;
+
+    margin: 2rem 0.75rem 0.75rem;
+
+}
+
+/* ----- END DASHBOARD OVERVIEW ----- */
+
+/* ----- START RECENT TRANSACTIONS ----- */
+
+.recent-transactions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.25rem;
+
+    grid-row: span 2;
+
+    align-self: start;
+
+    padding: 1.25rem 1.25rem 3rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+/* ----- END RECENT TRANSACTIONS ----- */
+
+
+/* ----- START TRANSACTIONS LIST ----- */
+
+.transactions-list {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+}
+
+/* ----- END TRANSACTIONS LIST ----- */
+
+
+/* ----- START TRANSACTION ROWS ----- */
+
+.transaction-row {
+
+    border-bottom: 1px solid #f8fafc;
+
+}
+
+.transaction-row th,
+.transaction-row td {
+    padding: 0.95rem 0;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.transaction-date {
+
+    font-weight: 500;
+
+    font-size: 0.9rem;
+
+}
+
+tbody .transaction-row:last-child {
+
+    border-bottom: none;
+
+}
+
+/* ----- END TRANSACTION ROWS ----- */
+
+
+/* ----- START TRANSACTION HEADER ----- */
+
+.transaction-header {
+
+    color: var(--secondary-color);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #f1f5f9;
+
+}
+
+.transaction-header th {
+
+    font-weight: inherit;
+
+}
+
+/* ----- END TRANSACTION HEADER ----- */
+
+
+/* ----- START TRANSACTION INFO ----- */
+
+
+.transaction-info-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+}
+
+
+.transaction-info-content>img {
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+/* ----- START TRANSACTION LOGOS ----- */
+
+.transaction-info .transaction-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+}
+
+
+.transaction-info .transaction-logo img {
+
+    width: 1.1rem;
+
+    height: 1.1rem;
+
+    border-radius: 0;
+
+}
+
+/* ----- END TRANSACTION LOGOS ----- */
+
+
+/* ----- START TRANSACTION LOGO BACKGROUNDS ----- */
+
+.restaurant-logo {
+
+    background-color: #ffedd5;
+
+}
+
+.shopping-logo {
+
+    background-color: #dbeafe;
+
+}
+
+.fuel-logo {
+
+    background-color: #fee2e2;
+
+}
+
+.entertainment-logo {
+
+    background-color: #e0e7ff;
+
+}
+
+.health-logo {
+
+    background-color: #cffafe;
+
+}
+
+.education-logo {
+
+    background-color: #d1fae5;
+
+}
+
+
+/* ----- END TRANSACTION LOGO BACKGROUNDS ----- */
+
+
+.transaction-info h3 {
+
+    color: var(--text-color);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+}
+
+.transaction-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+}
+
+/* ----- END TRANSACTION INFO ----- */
+
+
+/* ----- START TRANSACTION CATEGORY ----- */
+
+.transaction-category {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.4rem;
+
+    width: fit-content;
+
+    padding: 0.10rem 0.6rem;
+
+    border-radius: 2rem;
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+    font-weight: 500;
+
+
+}
+
+.transaction-category img {
+
+    width: 1rem;
+
+    height: 1rem;
+
+}
+
+/* ----- END TRANSACTION CATEGORY ----- */
+
+
+/* ----- START TRANSACTION CATEGORY COLORS ----- */
+
+.transaction-row:nth-child(1) .transaction-category {
+
+    color: #15803d;
+
+    background-color: #dcfce7;
+
+}
+
+.transaction-row:nth-child(2) .transaction-category {
+
+    color: #c2410c;
+
+    background-color: #ffedd5;
+
+}
+
+.transaction-row:nth-child(3) .transaction-category {
+
+    color: #1d4ed8;
+
+    background-color: #dbeafe;
+
+}
+
+.transaction-row:nth-child(4) .transaction-category {
+
+    color: #7e22ce;
+
+    background-color: #f3e8ff;
+
+}
+
+.transaction-row:nth-child(5) .transaction-category {
+
+    color: #047857;
+
+    background-color: #d1fae5;
+
+}
+
+.transaction-row:nth-child(6) .transaction-category {
+
+    color: #b91c1c;
+
+    background-color: #fee2e2;
+
+}
+
+.transaction-row:nth-child(7) .transaction-category {
+
+    color: #4338ca;
+
+    background-color: #e0e7ff;
+
+}
+
+.transaction-row:nth-child(8) .transaction-category {
+
+    color: #0e7490;
+
+    background-color: #cffafe;
+
+}
+
+.transaction-row:nth-child(9) .transaction-category {
+
+    color: #047857;
+
+    background-color: #d1fae5;
+
+}
+
+/* ----- END TRANSACTION CATEGORY COLORS ----- */
+
+
+/* ----- START TRANSACTION STATUS ----- */
+
+.transaction-status {
+
+    width: fit-content;
+
+    padding: 0.2rem 0.45rem;
+
+    border-radius: 2rem;
+
+    color: #15803d;
+
+    background-color: #dcfce7;
+
+    font-size: 0.75rem;
+
+    font-weight: 500;
+
+}
+
+.transaction-row:nth-child(6) .transaction-status {
+
+    color: #a16207;
+
+    background-color: #fef9c3;
+
+    border: 1px solid #fde68a;
+
+
+}
+
+/* ----- END TRANSACTION STATUS ----- */
+
+
+/* ----- START TRANSACTION AMOUNTS ----- */
+
+
+.transaction-row>td:nth-child(5) {
+
+    color: var(--text-color);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+}
+
+tbody .transaction-row:nth-child(1)>td:nth-child(5),
+tbody .transaction-row:nth-child(5)>td:nth-child(5) {
+
+    color: #16a34a;
+
+}
+
+/* ----- END TRANSACTION AMOUNTS ----- */
+
+
+/* ----- START RECENT ACTIVITIES ----- */
+
+.recent-activities {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding: 1.25rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+/* ----- END RECENT ACTIVITIES ----- */
+
+/* ----- START SECTION HEADER ----- */
+
+.recent-activities-header,
+.recent-transactions-header,
+.monthly-bills-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.recent-activities-header h2,
+.recent-transactions-header h2,
+.monthly-bills-header h2 {
+
+    font-size: 1.1rem;
+
+}
+
+.view-all-transactions {
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--text-color);
+
+    font-family: inherit;
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+/* ----- END SECTION HEADER ----- */
+
+
+/* ----- START ACTIVITY CARD ----- */
+
+.recent-activity-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 0.75rem;
+
+    padding: 0.75rem 0.85rem;
+
+    border: 1px solid transparent;
+
+    border-radius: 0.65rem;
+
+}
+
+/* ----- END ACTIVITY CARD ----- */
+
+
+/* ----- START ACTIVITY CONTENT ----- */
+
+.recent-activity-content {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.75rem;
+
+}
+
+.recent-activity-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.2rem;
+
+}
+
+/* ----- END ACTIVITY CONTENT ----- */
+
+
+/* ----- START ACTIVITY TEXT ----- */
+
+.recent-activity-info h3 {
+
+    color: var(--text-color);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+}
+
+.recent-activity-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+}
+
+.recent-activity-time {
+
+    margin-top: 0.45rem;
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+}
+
+.recent-activity-category {
+
+    align-self: flex-start;
+
+    font-size: 0.7rem;
+
+    font-weight: 500;
+
+}
+
+/* ----- END ACTIVITY TEXT ----- */
+
+
+/* ----- START ACCOUNT ACTIVITY ----- */
+
+.recent-activity-account {
+
+    background-color: #eff6ff;
+
+    border-left: 4px solid #3b82f6;
+
+}
+
+.recent-activity-account .recent-activity-category {
+
+    color: #2563eb;
+
+}
+
+.recent-activity-account .recent-activity-icon {
+
+    background-color: #dbeafe;
+
+}
+
+/* ----- END ACCOUNT ACTIVITY ----- */
+
+
+/* ----- START CARD ACTIVITY ----- */
+
+.recent-activity-card-type {
+
+    background-color: #f0fdf4;
+
+    border-left: 4px solid #22c55e;
+
+}
+
+.recent-activity-card-type .recent-activity-category {
+
+    color: #16a34a;
+
+}
+
+.recent-activity-card-type .recent-activity-icon {
+
+    background-color: #dcfce7;
+
+}
+
+/* ----- END CARD ACTIVITY ----- */
+
+
+/* ----- START ACTIVITY ICONS ----- */
+
+.recent-activity-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 2rem;
+
+    height: 2rem;
+
+    border-radius: 50%;
+
+}
+
+.recent-activity-icon img {
+
+    width: 1.2rem;
+
+    height: 1.2rem;
+
+}
+
+/* ----- END ACTIVITY ICONS ----- */
+
+
+/* ----- START ACTIVITIES DIVIDER ----- */
+
+.recent-activities-divider {
+
+    width: 100%;
+
+    border-bottom: 1px solid #f1f5f9;
+
+}
+
+/* ----- END ACTIVITIES DIVIDER ----- */
+
+
+/* ----- START VIEW ALL ACTIVITIES ----- */
+
+.view-all-activities {
+
+    align-self: center;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--primary-color);
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+}
+
+/* ----- END VIEW ALL ACTIVITIES ----- */
+
+
+/* ----- START MONTHLY BILLS ----- */
+
+.monthly-bills {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    padding: 0.75rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+/* ----- END MONTHLY BILLS ----- */
+
+
+/* ----- START MONTHLY BILLS HEADER ----- */
+
+.monthly-bills-view-all {
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--secondary-color);
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    padding: 1rem 0 0 1rem;
+
+    cursor: pointer;
+
+}
+
+/* ----- END MONTHLY BILLS HEADER ----- */
+
+
+/* ----- START MONTHLY BILLS TOTAL ----- */
+
+.monthly-bills-total {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.1rem;
+
+}
+
+.monthly-bills-total h3 {
+
+    color: var(--text-color);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+}
+
+.monthly-bills-total p {
+
+    color: var(--secondary-color);
+
+    font-size: 1rem;
+
+}
+
+/* ----- END MONTHLY BILLS TOTAL ----- */
+
+
+/* ----- START MONTHLY BILLS GRID ----- */
+
+.monthly-bills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0.75rem;
+
+}
+
+/* ----- END MONTHLY BILLS GRID ----- */
+
+
+/* ----- START MONTHLY BILL CARD ----- */
+
+.monthly-bill-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #f1f5f9;
+
+    border-radius: 0.75rem;
+
+}
+
+/* ----- END MONTHLY BILL CARD ----- */
+
+
+/* ----- START BILL ICON ----- */
+
+.bill-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 2rem;
+
+    height: 2rem;
+
+    border-radius: 0.5rem;
+
+}
+
+.bill-icon img {
+
+    width: 1.25rem;
+
+    height: 1.25rem;
+
+}
+
+/* ----- END BILL ICON ----- */
+
+
+/* ----- START BILL INFO ----- */
+
+.monthly-bill-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.25rem;
+
+
+}
+
+.monthly-bill-info h3 {
+
+    color: var(--secondary-color);
+
+    font-size: 0.8rem;
+
+
+}
+
+.monthly-bill-info p {
+
+    font-size: 0.75rem;
+
+    
+}
+
+/* ----- END BILL INFO ----- */
+
+
+/* ----- START BILL AMOUNT ----- */
+
+.bill-amount {
+
+    color: var(--text-color);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+
+}
+
+/* ----- END BILL AMOUNT ----- */
+
+
+/* ----- START BILL ICON COLORS ----- */
+
+.internet-bill .bill-icon {
+
+    background-color: #dbeafe;
+
+}
+
+.electricity-bill .bill-icon {
+
+    background-color: #fef9c3;
+
+}
+
+.phone-bill .bill-icon {
+
+    background-color: #dcfce7;
+
+}
+
+.netflix-bill .bill-icon {
+
+    background-color: #fee2e2;
+
+}
+
+/* ----- END BILL ICON COLORS ----- */
+
+
+/* ----- START BILL DUE DATES ----- */
+
+.internet-bill .monthly-bill-info p,
+.electricity-bill .monthly-bill-info p {
+
+    color: #ef4444;
+
+}
+
+.phone-bill .monthly-bill-info p {
+
+    color: #16a34a;
+
+}
+
+.netflix-bill .monthly-bill-info p {
+
+    color: var(--secondary-color);
+
+}
+
+/* ----- END BILL DUE DATES ----- */
+
+
+/* ----- START FINANCIAL DASHBOARD ----- */
+
+.financial-dashboard {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    direction: ltr;
+
+    gap: 1rem;
+
+    margin: 1rem 0.75rem;
+
+}
+
+
+/* ----- END FINANCIAL DASHBOARD ----- */
+
+
+/* ----- START PAYMENT METHODS ----- */
+
+.payment-methods {
+
+    display: flex;
+
+    flex-direction: column;
+
+    direction: rtl;
+
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+
+/* ----- END PAYMENT METHODS ----- */
+
+
+/* ----- START PAYMENT METHODS HEADER ----- */
+
+.payment-methods-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 0.25rem;
+
+}
+
+.payment-methods-header h2 {
+
+    color: var(--text-color);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+}
+
+.payment-methods-header button {
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--secondary-color);
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+}
+
+
+/* ----- END PAYMENT METHODS HEADER ----- */
+
+
+/* ----- START PAYMENT CARD ----- */
+
+.payment-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-height: 12rem;
+
+    padding: 1.5rem;
+
+    color: #ffffff;
+
+    border-radius: 0.85rem;
+
+    box-shadow: 0 0.35rem 0.65rem #0000001a;
+
+}
+
+
+/* ----- END PAYMENT CARD ----- */
+
+
+/* ----- START PAYMENT CARD COLORS ----- */
+
+.visa-card {
+
+    background-color: #382bb0;
+
+}
+
+.mastercard-card {
+
+    background-color: #c90036;
+
+}
+
+.paypal-card {
+
+    background-color: #1c3db5;
+
+}
+
+
+/* ----- END PAYMENT CARD COLORS ----- */
+
+
+/* ----- START PAYMENT CARD FLIP ----- */
+
+
+
+.payment-card-container {
+    perspective: 1000px;
+}
+
+.payment-card-inner {
+    position: relative;
+    min-height: 12rem;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.payment-card-container:hover .payment-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ----- FRONT AND BACK SIDES ----- */
+
+.payment-card,
+.payment-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.payment-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: #ffffff;
+    border-radius: 0.85rem;
+    box-shadow: 0 0.35rem 0.65rem #0000001a;
+    transform: rotateY(180deg);
+}
+
+/* ----- BACK CARD COLORS ----- */
+
+.visa-card-back,
+.mastercard-card-back, 
+.paypal-card-back {
+    background-color: #030920;
+}
+
+/* ----- MAGNETIC STRIP ----- */
+
+.card-magnetic-strip {
+    width: calc(100% + 3rem);
+    height: 2.5rem;
+    margin: 0 -1.5rem;
+    background-color: #171717;
+}
+
+/* ----- SIGNATURE AREA ----- */
+
+.card-signature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-signature span {
+    font-size: 0.65rem;
+}
+
+.card-signature-strip {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.4rem 0.75rem;
+    background-color: #ffffff;
+    color: #171717;
+    font-style: italic;
+}
+
+/* ----- SECURITY CODE ----- */
+
+.card-security-code {
+    align-self: flex-end;
+    text-align: left;
+}
+
+.card-security-code p {
+    font-size: 0.7rem;
+}
+
+.card-security-code h3 {
+    font-size: 0.9rem;
+}
+
+/* ----- END PAYMENT CARD FLIP ----- */
+
+
+
+/* ----- START PAYMENT CARD TOP ----- */
+
+.payment-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 2rem;
+
+    direction: ltr;
+
+}
+
+.payment-card-top img {
+
+    width: 3.2rem;
+
+    height: 2.1rem;
+
+    object-fit: contain;
+
+    margin: -0.75rem 0 0 -0.75rem;
+
+}
+
+.visa-card-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.15rem;
+
+    margin: -0.75rem 0 0 -0.75rem;
+
+}
+
+.visa-card-brand span {
+
+    position: relative;
+
+    padding: 0.3rem 0.6rem;
+
+    border: 1px solid #ffffff60;
+
+    border-radius: 1rem;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    z-index: 1;
+
+}
+
+.visa-card-brand span::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #ffffff30;
+
+    backdrop-filter: blur(5px);
+
+    border-radius: 1rem;
+
+    z-index: -1;
+}
+
+
+.visa-card-brand img {
+
+    width: 3.6rem;
+
+    height: 2.3rem;
+
+    object-fit: contain;
+
+    border-radius: 0.2rem;
+
+    margin: -1rem 0 0 0.4rem;
+
+}
+
+.payment-card-chip {
+
+    width: 2.8rem;
+
+    height: 1.8rem;
+
+    background-color: #ffffff40;
+
+    border-radius: 0.45rem;
+
+    position: relative;
+
+}
+
+.payment-card-chip::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0.4rem;
+
+    right: 0.45rem;
+
+    width: 1.9rem;
+
+    height: 1rem;
+
+    background-color: #ffffff60;
+
+    border-radius: 0.25rem;
+
+}
+
+
+/* ----- END PAYMENT CARD TOP ----- */
+
+
+/* ----- START PAYMENT CARD NUMBER ----- */
+
+.payment-card-number {
+
+    align-self: flex-start;
+
+    direction: ltr;
+
+    text-align: right;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04rem;
+
+}
+
+
+
+
+/* ----- END PAYMENT CARD NUMBER ----- */
+
+
+/* ----- START PAYMENT CARD DETAILS ----- */
+
+.payment-card-details {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    direction: ltr;
+
+}
+
+.payment-card-details>div {
+
+    text-align: right;
+
+}
+
+.payment-card-details p {
+
+    font-size: 0.7rem;
+
+}
+
+.payment-card-details h3 {
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ----- END PAYMENT CARD DETAILS ----- */
+
+
+/* ----- START PAYPAL ACCOUNT ----- */
+
+.paypal-account-title {
+
+    align-self: flex-start;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+}
+
+.paypal-account-status {
+
+    color: #00e68a;
+
+}
+
+
+/* ----- END PAYPAL ACCOUNT ----- */
+
+
+/* ----- START FINANCIAL MIDDLE COLUMN ----- */
+
+.financial-middle-column {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    direction: rtl;
+
+    gap: 1rem;
+
+}
+
+
+/* ----- END FINANCIAL MIDDLE COLUMN ----- */
+
+
+/* ----- START INCOME EXPENSES ----- */
+
+.income-expenses {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    min-height: 17rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+    flex: 0 0 20rem;
+
+}
+
+
+/* ----- END INCOME EXPENSES ----- */
+
+
+/* ----- START INCOME EXPENSES HEADER ----- */
+
+.income-expenses-header,
+.account-summary-header,
+.budget-overview-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.income-expenses-header h2,
+.account-summary-header h2,
+.budget-overview-header h2 {
+
+    color: var(--text-color);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+}
+
+.income-expenses-header button,
+.account-summary-header button,
+.budget-overview-header button {
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--secondary-color);
+
+    font-family: inherit;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.25rem;
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+}
+
+
+/* ----- END INCOME EXPENSES HEADER ----- */
+
+
+/* ----- START INCOME EXPENSES LEGEND ----- */
+
+.income-expenses-legend {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+.income-legend-item,
+.expenses-legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+}
+
+.income-legend-item span,
+.expenses-legend-item span {
+
+    width: 0.7rem;
+
+    height: 0.7rem;
+
+    border-radius: 0.15rem;
+
+}
+
+.income-legend-item span {
+
+    background-color: #10b981;
+
+}
+
+.expenses-legend-item span {
+
+    background-color: #ef4444;
+
+}
+
+.income-expenses-legend p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.85rem;
+
+}
+
+
+/* ----- END INCOME EXPENSES LEGEND ----- */
+
+
+/* ----- START INCOME EXPENSES CHART ----- */
+
+.income-expenses-chart {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    flex: 1;
+
+    min-height: 8rem;
+
+    padding-top: 0.5rem;
+
+}
+
+.chart-week {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 0.5rem;
+
+    height: 100%;
+
+}
+
+.chart-bars {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 0.12rem;
+
+    height: 7rem;
+
+}
+
+.chart-income-bar,
+.chart-expenses-bar {
+
+    width: 1rem;
+
+    border-radius: 0.2rem 0.2rem 0 0;
+
+}
+
+.chart-income-bar {
+
+    background-color: #10b981;
+
+}
+
+.chart-expenses-bar {
+
+    background-color: #ef4444;
+
+}
+
+.week-one-income {
+
+    height: 6rem;
+
+}
+
+.week-one-expenses {
+
+    height: 2.6rem;
+
+}
+
+.week-two-income {
+
+    height: 6.1rem;
+
+}
+
+.week-two-expenses {
+
+    height: 2.8rem;
+
+}
+
+.week-three-income {
+
+    height: 5.8rem;
+
+}
+
+.week-three-expenses {
+
+    height: 2.5rem;
+
+}
+
+.week-four-income {
+
+    height: 6rem;
+
+}
+
+.week-four-expenses {
+
+    height: 2.8rem;
+
+}
+
+.chart-week p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+}
+
+
+/* ----- END INCOME EXPENSES CHART ----- */
+
+
+/* ----- START ACCOUNT SUMMARY ----- */
+
+.account-summary {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    min-height: 19rem;
+
+    padding: 1.5rem 1.5rem 2.5rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+    flex: 0 0 24rem;
+
+}
+
+
+/* ----- END ACCOUNT SUMMARY ----- */
+
+
+/* ----- START ACCOUNT SUMMARY ITEM ----- */
+
+.account-summary-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 0.75rem;
+
+    padding: 1rem;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #f1f5f9;
+
+    border-radius: 0.75rem;
+
+}
+
+.account-summary-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+}
+
+.account-summary-info img {
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    padding: 0.65rem;
+
+    border-radius: 0.6rem;
+
+}
+
+.current-account .account-summary-info img {
+
+    background-color: #dbeafe;
+
+}
+
+.savings-account .account-summary-info img {
+
+    background-color: #dcfce7;
+
+}
+
+.credit-account .account-summary-info img {
+
+    background-color: #f3e8ff;
+
+}
+
+.account-summary-info h3 {
+
+    color: var(--text-color);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+}
+
+.account-summary-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.8rem;
+
+}
+
+.account-summary-balance {
+
+    color: var(--text-color);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+.credit-account-balance {
+
+    color: #ef4444;
+
+}
+
+
+/* ----- END ACCOUNT SUMMARY ITEM ----- */
+
+
+/* ----- START BUDGET OVERVIEW ----- */
+
+.budget-overview {
+
+    display: flex;
+
+    flex-direction: column;
+
+    direction: rtl;
+
+    gap: 1rem;
+
+    padding: 1.5rem 1.5rem 2.5rem;
+
+    background-color: var(--section-background);
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 1rem;
+
+}
+
+.budget-overview-header {
+
+    margin-bottom: 0.5rem;
+
+}
+
+/* ----- END BUDGET OVERVIEW ----- */
+
+
+/* ----- START TOTAL BUDGET CARD ----- */
+
+.total-budget-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    padding: 0.65rem;
+
+    background-color: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 0.75rem;
+
+}
+
+.total-budget-main {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.total-budget-main>div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.1rem;
+
+}
+
+
+.total-budget-main>div:first-child p {
+
+    color: #2563eb;
+
+    font-size: 0.9rem;
+
+}
+
+
+.total-budget-main>div:last-child p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.9rem;
+
+}
+
+
+.total-budget-main h2 {
+
+    color: #1e40af;
+
+    font-size: 1.55rem;
+
+    font-weight: 700;
+
+}
+
+.total-budget-main h3 {
+
+    color: #16a34a;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+}
+
+.total-budget-details {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.total-budget-details p {
+
+    color: var(--text-color);
+
+    font-size: 0.7rem;
+
+}
+
+.total-budget-progress,
+.budget-category-progress {
+
+    width: 100%;
+
+    height: 0.45rem;
+
+    background-color: #e5e7eb;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+}
+
+.total-budget-progress-fill {
+
+    width: 82.5%;
+
+    height: 100%;
+
+    background-color: #4f46e5;
+
+    border-radius: 1rem;
+
+}
+
+
+/* ----- END TOTAL BUDGET CARD ----- */
+
+
+/* ----- START BUDGET CATEGORY ----- */
+
+.budget-category {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 1rem;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--main-border);
+
+    border-radius: 0.75rem;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+
+.budget-category:hover {
+
+    background-color: #f5f7fa;
+
+    border-color: #00000020;
+
+    transform: translateY(-2px);
+
+}
+
+.budget-category-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+}
+
+.budget-category-info img {
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    padding: 0.65rem;
+
+    border-radius: 0.6rem;
+
+}
+
+.budget-category-info h3,
+.budget-category-amount h3 {
+
+    color: var(--text-color);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+}
+
+.budget-category-info p {
+
+    color: var(--secondary-color);
+
+    font-size: 0.8rem;
+
+}
+
+.budget-category-amount {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.25rem;
+
+}
+
+.budget-category-amount p {
+
+    padding: 0.2rem 0.5rem;
+
+    border-radius: 1rem;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+}
+
+.budget-category-progress {
+
+    grid-column: 1 / 3;
+
+}
+
+.entertainment-budget .budget-category-info img {
+
+    background-color: #ffedd5;
+
+}
+
+.bills-budget .budget-category-info img {
+
+    background-color: #fee2e2;
+
+}
+
+.personal-care-budget .budget-category-info img {
+
+    background-color: #fce7f3;
+
+}
+
+.household-budget .budget-category-info img {
+
+    background-color: #dcfce7;
+
+}
+
+.entertainment-budget .budget-category-amount p,
+.household-budget .budget-category-amount p {
+
+    color: #16a34a;
+
+    background-color: #dcfce7;
+
+}
+
+.bills-budget .budget-category-amount p {
+
+    color: #ef4444;
+
+    background-color: #fee2e2;
+
+}
+
+.personal-care-budget .budget-category-amount p {
+
+    color: #d97706;
+
+    background-color: #fef3c7;
+
+}
+
+
+/* ----- END BUDGET CATEGORY ----- */
+
+
+/* ----- START BUDGET PROGRESS COLORS ----- */
+
+.entertainment-progress-fill,
+.bills-progress-fill,
+.personal-care-progress-fill,
+.household-progress-fill {
+
+    height: 100%;
+
+    border-radius: 1rem;
+
+    transform-origin: right;
+
+    animation: budget-progress-animation 1.2s ease-out forwards;
+
+}
+
+.entertainment-progress-fill {
+
+    width: 50%;
+
+    background-color: #ff6b00;
+
+}
+
+.bills-progress-fill {
+
+    width: 100%;
+
+    background-color: #ef3340;
+
+}
+
+.personal-care-progress-fill {
+
+    width: 80%;
+
+    background-color: #ec3298;
+
+}
+
+.household-progress-fill {
+
+    width: 86%;
+
+    background-color: #00c853;
+
+}
+
+
+/* Budget Progress Bar Animation */
+
+@keyframes budget-progress-animation {
+
+    from {
+
+        transform: scaleX(0);
+
+    }
+
+    to {
+
+        transform: scaleX(1);
+
+    }
+}
+
+
+
+
+/* ----- END BUDGET PROGRESS COLORS ----- */
